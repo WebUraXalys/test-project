@@ -165,6 +165,40 @@ input:focus~.highlight {
 	animation: inputHighlighter 0.3s ease;
 }
 
+/* animations inputs*/
+@-webkit-keyframes inputHighlighter {
+	from {
+		background: #8643DC;
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@-moz-keyframes inputHighlighter {
+	from {
+		background: #8643DC;
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+@keyframes inputHighlighter {
+	from {
+		background: #8643DC;
+	}
+
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
 .buttons {
 	display: flex;
 	justify-content: space-between;
