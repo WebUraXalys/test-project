@@ -16,6 +16,22 @@ let transporter = nodemailer.createTransport({
 const sendEmail = expressAsyncHandler(async (req, res) => {
   const { email, name, message } = req.body;
   console.log(email, name, message);
+
+
+
+  var mailOptions = {
+    from: process.env.SMTP_MAIL,
+    to: email,
+    subject: `Лист від Creator IT Academy для ${name}`,
+  };
+
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent successfully!");
+    }
+  });
 });
 
 module.exports = { sendEmail };
