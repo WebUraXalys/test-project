@@ -41,6 +41,13 @@ function App() {
          </div>
          <div className="buttons">
             <button className="button_send">Get a Quote</button>
+            <div className="image_upload">
+               <label className="file_label" htmlFor="file_input">
+                  <img src={ImgFastener}/>
+                  <img src={ImgArrow}/>
+               </label>
+               <input id="file_input" type="file"/>
+            </div>
          </div>
       </div>
       
