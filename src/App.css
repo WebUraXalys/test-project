@@ -44,9 +44,7 @@ body{
 
 .header_text {
 	width: 512px;
-	/* height: 156px; */
 	margin: 0;
-	/* 165px */
 
 	color: #21232D;
 	font-family: Roboto;
@@ -65,4 +63,28 @@ body{
 	line-height: normal;
 	text-decoration-line: underline;
 	text-transform: lowercase;
+}
+.group {
+	position: relative;
+	margin-top: 50px;
+	margin-bottom: 45px;
+}
+
+.group:last-child {
+	margin-bottom: 30px;
+}
+
+input {
+	color: #21232D;
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #DAD2E3;
+	background: transparent;
+}
+
+input:focus {
+	outline: none;
 }

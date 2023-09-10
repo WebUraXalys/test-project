@@ -20,6 +20,24 @@ function App() {
       </div>
       <div className="form">
          <div className="inputs">
+            <div className="group">      
+               <input type="text" required/>
+               <span className="highlight"></span>
+               <span className="bar"></span>
+               <label className="label_input">What’s your name?</label>
+            </div>
+            <div className="group">      
+               <input type="text" required />
+               <span className="highlight"></span>
+               <span className="bar"></span>
+               <label className="label_input">Your email</label>
+            </div>
+            <div className="group">      
+               <input type="text" required />
+               <span className="highlight"></span>
+               <span className="bar"></span>
+               <label className="label_input">Tell me about your project</label>
+            </div>
          </div>
          <div className="buttons">
          </div>
