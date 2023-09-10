@@ -6,6 +6,23 @@ import './App.css';
 
 
 function App() {
+   const [name, setName] = useState("");
+   const [email, setEmail] = useState("");
+   const [message, setMessage] = useState("");
+
+   const sendEmail =  () =>{
+      let dataSend = {
+         email: email,
+         name: name,
+         message: message,
+      };
+      console.log("Надсилаю");
+      const res =  fetch(`${}/email/sendEmail`, {
+         method: "POST",
+         body: JSON.stringify(dataSend),
+
+      })
+   };
   return (
    <>
    <div className="main">
@@ -21,26 +38,26 @@ function App() {
       <div className="form">
          <div className="inputs">
             <div className="group">      
-               <input type="text" required/>
+               <input type="text" required onChange={(e) => setName(e.target.value)}/>
                <span className="highlight"></span>
                <span className="bar"></span>
                <label className="label_input">What’s your name?</label>
             </div>
             <div className="group">      
-               <input type="text" required />
+               <input type="text" required onChange={(e) => setEmail(e.target.value)}/>
                <span className="highlight"></span>
                <span className="bar"></span>
                <label className="label_input">Your email</label>
             </div>
             <div className="group">      
-               <input type="text" required />
+               <input type="text" required onChange={(e) => setMessage(e.target.value)}/>
                <span className="highlight"></span>
                <span className="bar"></span>
                <label className="label_input">Tell me about your project</label>
             </div>
          </div>
          <div className="buttons">
-            <button className="button_send">Get a Quote</button>
+            <button className="button_send" onClick={() => sendEmail()}>Get a Quote</button>
             <div className="image_upload">
                <label className="file_label" htmlFor="file_input">
                   <img src={ImgFastener}/>
