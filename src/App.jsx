@@ -50,9 +50,14 @@ function App() {
             </div>
          </div>
       </div>
-      
    </div>
    <div className="footer">
+      <h1 className="footer_text">Let’s be Friends</h1>
+      <div className="footer_logos">
+         <a className="footer_logo" href="http://www.instagram.com/creator_it_academy/"><img  src={ImgInstagram}/></a>
+         <a className="footer_logo" href="http://www.instagram.com/creator_it_academy/"><img  src={ImgInstagram}/></a>
+         <a className="footer_logo" href="http://www.instagram.com/creator_it_academy/"><img  src={ImgInstagram}/></a>
+      </div>
    </div>
    </>
   );

@@ -195,3 +195,31 @@ input:focus~.highlight {
 	display: none;
 	visibility: none;
 }
+
+.footer {
+	margin-top: 40px;
+	margin-bottom: 15px;
+}
+
+.footer_text {
+	color: #21232D;
+	text-align: center;
+	font-family: Red Hat Display;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.footer_logos {
+	display: flex;
+	justify-content: center;
+}
+
+.footer_logo {
+	margin-right: 40px;
+}
+
+.footer_logo:last-child {
+	margin-right: 0;
+}
