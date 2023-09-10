@@ -17,12 +17,47 @@ const sendEmail = expressAsyncHandler(async (req, res) => {
   const { email, name, message } = req.body;
   console.log(email, name, message);
 
+  const emailBody = `
+  <html>
+    <head>
+      <style>
+        body {
+          background-color: #fffff;
+          font-family: Roboto, sans-serif;
+          color: #000;
+        }
+        .container {
+          text-align: center;
+          margin-top: 50px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 18px;
+          margin-top: 20px;
+        }
+        span{
+          color: #8643DC;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Доброго дня <span>${name}</span> , вас вітає Creator IT Academy</h1>
+        <p>Найближчим часом ми розглянемо вашу ідею і зателефонуємо вам.</p>
+        <p>Ваша ідея: ${message}</p>
 
+      </div>
+    </body>
+  </html>
+`;
 
   var mailOptions = {
     from: process.env.SMTP_MAIL,
     to: email,
     subject: `Лист від Creator IT Academy для ${name}`,
+    html: emailBody,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
