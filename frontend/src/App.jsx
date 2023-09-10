@@ -9,7 +9,7 @@ function App() {
    const [name, setName] = useState("");
    const [email, setEmail] = useState("");
    const [message, setMessage] = useState("");
-   
+
    const baseURL = "http://localhost:3001";
 
    const sendEmail = async () =>{
@@ -27,7 +27,16 @@ function App() {
             "Content-Type": "application/json",
          },
       })
+         .then((res) => {
+            console.log(res);
+            if(res.status > 199 && res.status < 300){
+               alert("Yes");
+            } else{
+               alert("No");
+            }
+         });
    };
+
   return (
    <>
    <div className="main">
@@ -72,6 +81,7 @@ function App() {
             </div>
          </div>
       </div>
+      
    </div>
    <div className="footer">
       <h1 className="footer_text">Let’s be Friends</h1>
