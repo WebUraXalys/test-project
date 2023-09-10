@@ -158,9 +158,30 @@ input:focus~.bar:after {
 	opacity: 0.5;
 }
 
-/* active state */
+/* active  */
 input:focus~.highlight {
 	-webkit-animation: inputHighlighter 0.3s ease;
 	-moz-animation: inputHighlighter 0.3s ease;
 	animation: inputHighlighter 0.3s ease;
 }
+
+
+
+
+.button_send {
+	width: 200px;
+	height: 60px;
+	flex-shrink: 0;
+	border: none;
+	border-radius: 100px;
+	background: #8643DC;
+
+	color: #FFF;
+	text-align: center;
+	font-family: Red Hat Display;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+

@@ -40,6 +40,7 @@ function App() {
             </div>
          </div>
          <div className="buttons">
+            <button className="button_send">Get a Quote</button>
          </div>
       </div>
       
