@@ -9,18 +9,23 @@ function App() {
    const [name, setName] = useState("");
    const [email, setEmail] = useState("");
    const [message, setMessage] = useState("");
+   
+   const baseURL = "http://localhost:3001";
 
-   const sendEmail =  () =>{
+   const sendEmail = async () =>{
       let dataSend = {
          email: email,
          name: name,
          message: message,
       };
       console.log("Надсилаю");
-      const res =  fetch(`${}/email/sendEmail`, {
+      const res = await fetch(`${baseURL}/email/sendEmail`, {
          method: "POST",
          body: JSON.stringify(dataSend),
-
+         headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+         },
       })
    };
   return (
