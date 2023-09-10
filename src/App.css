@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&family=Roboto:wght@400;500&display=swap');
+body{
+	width: 100vw;
+	background: #fff;
+	/* background: linear-gradient(180deg, rgba(251, 245, 255, 1) 0%, rgba(255, 255, 255, 1) 100%); */
+	background: linear-gradient(180deg, rgba(187, 133, 255, 1) 0%, rgba(255, 244, 251, 1) 20%);
+	/* filter: blur(50px);  */
+}
+#root{
+	width: 100vw;
+}
+.main{
+	width: 80%;
+	margin: auto;
+}
