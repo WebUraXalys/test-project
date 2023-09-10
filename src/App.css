@@ -13,3 +13,56 @@ body{
 	width: 80%;
 	margin: auto;
 }
+.tabs {
+	padding-top: 50px;
+}
+
+.tab {
+	color: #8643DC;
+	font-family: Red Hat Display;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.tab::after {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 2px;
+	margin-top: 10px;
+	flex-shrink: 0;
+	background: #8643DC;
+}
+
+
+.header_texts {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header_text {
+	width: 512px;
+	/* height: 156px; */
+	margin: 0;
+	/* 165px */
+
+	color: #21232D;
+	font-family: Roboto;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 52px;
+}
+
+.email {
+	color: #8643DC;
+	font-family: Roboto;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-decoration-line: underline;
+	text-transform: lowercase;
+}
