@@ -30,9 +30,9 @@ function App() {
          .then((res) => {
             console.log(res);
             if(res.status > 199 && res.status < 300){
-               alert("Yes");
+               alert("Email sent successfully!");
             } else{
-               alert("No");
+               alert("Помилка при надсиланні електронної пошти");
             }
          });
    };

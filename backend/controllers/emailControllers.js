@@ -61,12 +61,14 @@ const sendEmail = expressAsyncHandler(async (req, res) => {
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Email sent successfully!");
-    }
-  });
+  if (error) {
+    console.log(error);
+    res.status(500).send("Помилка при надсиланні електронної пошти");
+  } else {
+    console.log("Email sent successfully!");
+    res.status(200).send("Email sent successfully!");
+  }
+});
 });
 
 module.exports = { sendEmail };
